@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Nunito+Sans:opsz@6..12&family=Open+Sans&family=Palanquin+Dark&family=Palanquin:wght@300;600&family=Poppins:wght@100;400&family=REM:wght@400;500&family=Roboto+Condensed&family=Roboto:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  transition: all 0.25s;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  background-image: url("https://images.unsplash.com/photo-1720371300677-ba4838fa0678?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: brightness(85%);
+}
+#main {
+  width: 1400px;
+}
+#main .title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  color: white;
+}
+@keyframes animation-text {
+  0% {
+    filter: hue-rotate(129deg);
+  }
+  50% {
+    filter: hue-rotate(197deg);
+  }
+  100% {
+    filter: hue-rotate(12deg);
+  }
+}
+#main .box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 90px;
+  position: relative;
+}
+#main .box .icon {
+  font-size: 30px;
+  color: white;
+}
+#main .box .form-group {
+  width: 45%;
+}
+.box .form-group select {
+  position: absolute;
+  width: 250px;
+  height: 35px;
+  top: -30px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding-left: 5px;
+  transform: translateY(-10px);
+  font-size: 18px;
+  color: black;
+}
+.box .form-group:first-of-type {
+  position: relative;
+}
+.box .form-group:first-of-type .box-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: black;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  position: absolute;
+  transition: none;
+  bottom: -45px;
+}
+.form-group:first-of-type .box-icon--mic .icon-square {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: none;
+}
+.box .form-group:first-of-type .box-icon--photo .icon-photo {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box .form-group:first-of-type .box-icon--photo .image {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  opacity: 0;
+}
+.box .form-group:first-of-type .box-icon--photo {
+  left: 15px;
+}
+.box .form-group:first-of-type select {
+  left: 0;
+}
+.box .form-group:last-of-type select {
+  right: 2%;
+}
+.box .form-group select option {
+  font-size: 18px;
+  color: black;
+}
+.box .form-group textarea {
+  width: 100%;
+  height: 400px;
+  resize: none;
+  outline: none;
+  padding: 20px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  font-size: 23px;
+  background-color: transparent;
+  color: white;
+}
+.box .form-group textarea::placeholder {
+  color: white;
+}
+.box .form-group textarea::-webkit-scrollbar {
+  width: 10px;
+}
+.box .form-group textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: white;
+}
+#main .box .btn {
+  width: 200px;
+  height: 50px;
+  margin: 30px auto;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+#main .box .btn span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#main .box .btn:hover {
+  background-color: yellow;
+  transition: all 0.25s;
+}
+
+#main .box .btn:hover::before {
+  width: 101%;
+}
+@media screen and (min-width: 1024px) and (max-width: 1320px) {
+  .box .form-group select {
+    width: 200px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .box .form-group select {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main .title {
+    font-size: 40px;
+    transform: translateY(10px);
+  }
+  #main .box {
+    flex-direction: column;
+    gap: 40px 0;
+    padding: 0 10px;
+  }
+  #main .box .form-group {
+    width: 100%;
+  }
+  .box .form-group select {
+    width: 120px;
+    font-size: 15px;
+  }
+  .box .form-group:first-of-type select {
+    left: 0;
+  }
+  .box .form-group:last-of-type select {
+    top: 286px;
+    left: 11px;
+  }
+  .box .form-group textarea {
+    height: 200px;
+  }
+  #main .box .icon {
+    transform: rotate(90deg);
+  }
+  #main .box .btn {
+    width: 150px;
+    height: 45px;
+    transform: translateY(-30px);
+  }
+}

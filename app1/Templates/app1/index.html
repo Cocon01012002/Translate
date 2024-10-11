@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Translate</title>
+    <link rel="stylesheet" href="{% static 'app1/style.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="main">
+      <p class="title">Google Translate</p>
+      <div class="box" id="translation-form">
+        <div class="form-group">
+          <select name="languages" id="from-language" class="lg">
+            <option value="en" selected>Tiếng Anh</option>
+            <option value="vi">Tiếng Việt</option>
+            <option value="ko">Tiếng Hàn</option>
+            <option value="Fa">Tiếng Pháp</option>
+            <option value="Ja">Tiếng Nhật</option>
+          </select>
+          <textarea
+            name="text-input"
+            class="input"
+            id="text-input"
+            placeholder="Nhập văn bản"
+            maxlength="5000"
+          ></textarea>
+          <button class="box-icon box-icon--photo">
+            <i class="fa-solid fa-image icon-photo"></i>
+            <input
+              type="file"
+              name="image"
+              id="image"
+              accept="image/*"
+              class="image"
+            />
+          </button>
+        </div>
+        <i class="fa-solid fa-right-long icon"></i>
+        <div class="form-group">
+          <select name="languages" id="to-language" class="lg">
+            <option value="en">Tiếng Anh</option>
+            <option value="vi" selected>Tiếng Việt</option>
+            <option value="ko">Tiếng Hàn</option>
+            <option value="fr">Tiếng Pháp</option>
+            <option value="Ja">Tiếng Nhật</option>
+          </select>
+          <textarea
+            name="text-translate"
+            class="output"
+            placeholder="Bản dịch"
+            readonly
+          ></textarea>
+        </div>
+        <button type="submit" class="btn submit">
+          <span>Translate</span>
+        </button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{% static 'app1/main.js'%}"></script>
+  </body>
+</html>
